@@ -1,9 +1,9 @@
 package jpabook.jpashop.controller;
 
-import jakarta.persistence.criteria.Order;
 import jpabook.jpashop.domain.Item;
 import jpabook.jpashop.domain.Member;
-import jpabook.jpashop.repository.OrderSearch;
+import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderSearch;
 import jpabook.jpashop.service.ItemService;
 import jpabook.jpashop.service.MemberService;
 import jpabook.jpashop.service.OrderService;
@@ -36,7 +36,7 @@ public class OrderController {
         orderService.order(memberId, itemId, count);
         return "redirect:/orders";
     }
-    /*
+
     @GetMapping("/orders")
     public String orderList(@ModelAttribute("orderSearch") OrderSearch orderSearch, Model model){
         List<Order> orders = orderService.findOrders(orderSearch);
@@ -49,7 +49,5 @@ public class OrderController {
         orderService.cancelOrder(orderId);
         return "redirect:/orders";
     }
-    */
-
 
 }
