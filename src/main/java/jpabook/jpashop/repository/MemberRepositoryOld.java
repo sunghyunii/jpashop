@@ -9,7 +9,7 @@ import java.util.List;
 
 //컴포넌트 스캔에 의해서 자동으로 스프링 빈으로 관리
 @Repository
-public class MemberRepository {
+public class MemberRepositoryOld {
     //엔티티 매니저를 인젝션 하기 위해서 @Autowired 대신
     //JPA가 제공하는 표준 어노테이션 @Persistence Context 이 있어야 인젝션이 된다
     //그러나 스프링 부트는 @Autowired도 인젝션되게 지원
